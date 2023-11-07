@@ -13,7 +13,7 @@ function App() {
   const [postedby, setIsPostedBy] = useState("");
 
  
-  const [time, setTime] = useState(0);
+  const [time, setTime] = useState();
 
   const blogsCollectionRef = collection(db, "Blogs");
 
@@ -32,9 +32,8 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    getBlogs();
-  }, []);
+ 
+  
 
   const onSubmitBlogs = async () => {
     try {

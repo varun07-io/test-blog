@@ -1,10 +1,12 @@
 import React from "react";
-import Landing from "./pages/Landing";
-import './App.css'
+import Admin from "./admin/Admin";
+
+
+
 function App() {
   return (
     <div>
-    <Landing />
+        <Admin/>
     </div>
   );
 }
