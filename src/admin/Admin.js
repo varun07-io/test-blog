@@ -12,7 +12,7 @@ function App() {
   const [postedby, setIsPostedBy] = useState("");
 
  
-  const [time, setTime] = useState(0);
+  const [time, setTime] = useState();
 
   const blogsCollectionRef = collection(db, "Blogs");
 
@@ -67,13 +67,14 @@ function App() {
          onChange={(e) => setContent(e.target.value)}
         />
         <input
+        
           placeholder="postedby"
           onChange={(e) => setIsPostedBy(e.target.value)}
         />
         <input
           placeholder="time"
-          type="Number"
-          onChange={(e) => setTime(Number(e.target.value))}
+          type="date"
+          onChange={(e) => setTime(Date(e.target.value))}
         />
         
         <button onClick={onSubmitBlogs}> Submit Blog</button>
@@ -85,7 +86,7 @@ function App() {
                 <h1>{list.Title}</h1>
                 <img src={list.image}/>
                 <p>{list.content}</p>
-                <p>{list.Posted}</p>
+                <p>Posted by: {list.Posted}</p>
                 <p>{list.uploadTime}</p>
             </div>
          ))
