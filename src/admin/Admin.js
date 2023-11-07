@@ -31,9 +31,8 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    getBlogs();
-  }, []);
+ 
+  
 
   const onSubmitBlogs = async () => {
     try {
