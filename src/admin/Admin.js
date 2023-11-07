@@ -12,7 +12,7 @@ function App() {
   const [postedby, setIsPostedBy] = useState("");
 
  
-  const [time, setTime] = useState(0);
+  const [time, setTime] = useState();
 
   const blogsCollectionRef = collection(db, "Blogs");
 
@@ -31,9 +31,8 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    getBlogs();
-  }, []);
+ 
+  
 
   const onSubmitBlogs = async () => {
     try {
@@ -72,8 +71,8 @@ function App() {
         />
         <input
           placeholder="time"
-          type="Number"
-          onChange={(e) => setTime(Number(e.target.value))}
+          type="date"
+          onChange={(e) => setTime(Date(e.target.value))}
         />
         
         <button onClick={onSubmitBlogs}> Submit Blog</button>
