@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { db } from "../config/Firebase";
 import {getDocs,collection,addDoc} from "firebase/firestore";
+import { Container } from "@mui/material";
 
 
 function App() {
@@ -53,44 +54,50 @@ function App() {
   };
 
   return (
-    <div>
-    <div>
-        <input
-          placeholder="blogTitle"
-          onChange={(e) => setTitle(e.target.value)}
-        />
-      
-       <input type="text" placeholder="image" value={image} onChange={(e)=>setImage(e.target.value)}/>
-        
-        <input
-          placeholder="Content"
-         onChange={(e) => setContent(e.target.value)}
-        />
-        <input
-          placeholder="postedby"
-          onChange={(e) => setIsPostedBy(e.target.value)}
-        />
-        <input
-          placeholder="time"
-          type="Number"
-          onChange={(e) => setTime(Number(e.target.value))}
-        />
-        
-        <button onClick={onSubmitBlogs}> Submit Blog</button>
-      </div>
+  <div className="blog-main">
+    <Container>
+      <div className="blog-create">
+        <h1>Create Blog</h1>
+        <div className="input-fields">
+            <input
+              placeholder="blogTitle"
+              onChange={(e) => setTitle(e.target.value)}
+            />
+          
+          <input type="text" placeholder="image" value={image} onChange={(e)=>setImage(e.target.value)}/>
+            
+            <input
+              placeholder="Content"
+            onChange={(e) => setContent(e.target.value)}
+            />
+            <input
+              placeholder="postedby"
+              onChange={(e) => setIsPostedBy(e.target.value)}
+            />
+            <input
+              placeholder="time"
+              type="Number"
+              onChange={(e) => setTime(Number(e.target.value))}
+            />
+            
+            <button onClick={onSubmitBlogs}> Submit Blog</button>
+          </div>
 
-      <div>
-        {list.map((list) => (
-            <div key={list.id} >
-                <h1>{list.Title}</h1>
-                <img src={list.image}/>
-                <p>{list.content}</p>
-                <p>{list.Posted}</p>
-                <p>{list.uploadTime}</p>
+          <div>
+            {list.map((list) => (
+                <div key={list.id} >
+                    <h1>{list.Title}</h1>
+                    <img src={list.image}/>
+                    <p>{list.content}</p>
+                    <p>{list.Posted}</p>
+                    <p>{list.uploadTime}</p>
+                </div>
+            ))
+            }
             </div>
-         ))
-         }
-        </div>
+
+          </div>
+        </Container> 
       </div>
   );
 }

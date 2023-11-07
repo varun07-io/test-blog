@@ -1,0 +1,46 @@
+/* Navbar styles */
+.main{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    background-color: white;
+    z-index: 1000;
+  }
+.navbar{
+    padding: 0 25px;
+    display:flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+  }
+.nav{
+    display:flex;
+    flex-flow: row;
+    gap: 50px;
+  }
+ 
+  /* Landing page */
+  .land-text{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    padding-top: 40px;
+  }
+  /* Admin create panel */
+  .blog-main{
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    }
+  .input-fields{
+    display: flex;
+    flex-flow: column;
+    row-gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  .input-fields input{
+    height: 40px;
+    width: 500px;
+  }
