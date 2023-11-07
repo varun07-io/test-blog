@@ -1,9 +1,10 @@
 import React from "react";
+import Admin from "./admin/Admin"
 
 function App() {
   return (
-    <div className="App">
-      <h1></h1>
+    <div>
+    <Admin />
     </div>
   );
 }
