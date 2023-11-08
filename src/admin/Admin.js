@@ -66,6 +66,7 @@ function App() {
             />
           
           <input type="text" placeholder="image" value={image} onChange={(e)=>setImage(e.target.value)}/>
+          <h1>description</h1>
           <input
               placeholder="Description"
             onChange={(e) => setDescript(e.target.value)}
