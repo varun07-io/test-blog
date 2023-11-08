@@ -8,8 +8,9 @@ export default function Navbar() {
         <Container>
             <div className='navbar' >
                 <div className='nav'>
-                    <p>Admin</p>
-                    <p>Blogs</p>
+                    <Link to="/"  style={{ textDecoration: 'none',color: 'black'}}><p>Home</p></Link>
+                    <Link to="/Admin"  style={{ textDecoration: 'none',color: 'black'}}><p>Admin</p></Link> 
+                    <Link to="/Blogs" style={{ textDecoration: 'none',color: 'black' }}><p>Blogs</p></Link> 
                 </div>
             </div>
         </Container>

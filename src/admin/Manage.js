@@ -35,17 +35,17 @@ export default function Manage() {
  
     return (
     <div>
-            <div>
-        {list.map((list) => (
-            <div key={list.id} >
-                <h1>{list.Title}</h1>
-                <img src={list.image}/>
-                <p>{list.content}</p>
-                <p>{list.Posted}</p>
-                <p>{list.uploadTime}</p>
-            </div>
-         ))
-         }
+        <div>
+          {list.map((list) => (
+              <div key={list.id} >
+                  <h1>{list.Title}</h1>
+                  <img src={list.image}/>
+                  <p>{list.content}</p>
+                  <p>{list.Posted}</p>
+                  <p>{list.uploadTime}</p>
+              </div>
+          ))
+          }
         </div>
     </div>
   )

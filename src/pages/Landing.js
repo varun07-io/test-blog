@@ -1,12 +1,14 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import Admin from '../admin/Admin'
+import Cards from '../components/Cards'
+
+
 export default function Landing() {
   return (
     <div>
-        <Navbar />
-        <h1 className='land-text'>Blog</h1>
-        <Admin />
+      <Navbar />
+      <h1 className='land-text'>Blogs</h1> 
+      <Cards />
     </div>
   )
 }
