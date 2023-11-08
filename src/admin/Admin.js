@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { db } from "../config/Firebase";
 import {getDocs,collection,addDoc} from "firebase/firestore";
 import { Container } from "@mui/material";
@@ -9,6 +9,7 @@ function App() {
     const [title, setTitle] = useState("");
 
    const [image, setImage] = useState( );
+   const [descript, setDescript] = useState("");
   const [content, setContent] = useState("");
   const [postedby, setIsPostedBy] = useState("");
 
@@ -40,6 +41,7 @@ function App() {
        await addDoc(blogsCollectionRef, {
         Title: title,
         Posted: postedby,
+        Description : descript,
         content:content,
         image: image,
         uploadTime: time
@@ -64,7 +66,10 @@ function App() {
             />
           
           <input type="text" placeholder="image" value={image} onChange={(e)=>setImage(e.target.value)}/>
-            
+          <input
+              placeholder="Description"
+            onChange={(e) => setDescript(e.target.value)}
+            />
             <input
               placeholder="Content"
             onChange={(e) => setContent(e.target.value)}
@@ -87,6 +92,7 @@ function App() {
                 <div key={list.id} >
                     <h1>{list.Title}</h1>
                     <img src={list.image}/>
+                    <p>{list.Description}</p>
                     <p>{list.content}</p>
                     <p>{list.Posted}</p>
                     <p>{list.uploadTime}</p>
