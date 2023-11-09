@@ -7,7 +7,7 @@ export default function Landing() {
   return (
     <div>
       <Navbar />
-      <h1 className='land-text'>Blogs</h1> 
+      <h1 className='land-text'>Skin Beauty Glow</h1> 
       <Cards />
     </div>
   )

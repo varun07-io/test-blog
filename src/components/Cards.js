@@ -4,6 +4,7 @@ import { db } from "../config/Firebase";
 import {getDocs,collection,addDoc} from "firebase/firestore";
 import { Container } from "@mui/material";
 import Navbar from "../components/Navbar";
+import { Link } from 'react-router-dom';
 
 export default function Cards() {
    
@@ -71,10 +72,11 @@ export default function Cards() {
                         <div className='img-div'>
                           <img src={list.image}/>
                         </div>
-                        <div>
+                        <div className='text-div'>
                           <h1>{list.Title}</h1>
-                          <p>{list.Posted}</p>
-                          <p>{list.uploadTime}</p>
+                          <p className='desc'>{list.Description}</p>
+                          <p className='post'>{list.Posted}</p>
+                          <p className='time'>{list.uploadTime}</p>
                         </div>
                         </div>  
                     </div>

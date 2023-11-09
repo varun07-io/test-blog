@@ -20,16 +20,15 @@
     gap: 50px;
     font-size: 1.2rem;
   }
-  .nav p{
-    text-decoration: none;
-  }
- 
+  
   /* Landing page */
   .land-text{
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bolder;
     padding-top: 80px;
+    font-style: oblique;
+    letter-spacing: .5px;
   }
   /* Admin create panel */
   .blog-main{
@@ -46,16 +45,19 @@
   .input-fields input{
     height: 50px;
     width: 500px;
+    border-radius: 5px;
   }
   .input-fields button{
     width:150px;
     height:40px;
+    border-radius: 5px;
   }
   .blog-create{
     height: 75%;
-    padding: 80px 0;
-    background-color: black;
-    color: white;
+    padding: 80px 0 30px 0;
+    width: 700px;
+    margin-left: 220px;
+    background-color:rgb(250, 247, 247) ;
   }
   .container{
     text-align: center;
@@ -64,25 +66,73 @@
 
   /* Card */
   .card-main{
-    height:300px;
-    width: 500px;
-    background-color: whitesmoke;
+    height:290px;
+    width: 1000px;
+    background-color: rgb(250, 247, 247);
+    
   }
   .card-container{
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
     gap:30px;
-    flex-wrap: wrap;
-    margin-top: 10%;
+   
   }
   .card-content{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .img-div img{
-    height:250px;
-    width:300px;
+    grid-template-columns: 1fr 2fr;
     padding: 20px;
   }
+  .img-div img{
+    height: 250px;
+    width:300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .text-div h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .desc{
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .post{
+    font-size: 1.1rem;
+    font-weight: normal;
+  }
+
+  /* Blog detailed */
+
+  .blog-container{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+   padding-top: 100px;
+  
+  }
+ .blog-main{
+  padding: 0 50px;
+ }
+ .blog-content h1{
+  font-size: 2rem;
+  font-weight: bolder;
+ }
+ .blog-content img{
+  max-width: 100%;
+  height:auto;
+  padding: 20px 0;
+ }
+ .blog-desc{
+  font-size: 2.5rem;
+ font-weight: bold;
+ }
+ .blog-cont{
+  font-size: 1.5rem;
+  text-align: justify;
+ }

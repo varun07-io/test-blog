@@ -4,7 +4,6 @@ import {getDocs,collection,addDoc} from "firebase/firestore";
 import { Container } from "@mui/material";
 import Navbar from "../components/Navbar";
 
-
 function App() {
     const [list, setList] = useState([])
     const [title, setTitle] = useState("");
@@ -16,6 +15,8 @@ function App() {
 
  
   const [time, setTime] = useState();
+
+
 
   const blogsCollectionRef = collection(db, "Blogs");
 
@@ -55,20 +56,23 @@ function App() {
     }
   };
 
+ 
+  
+  
+
   return (
     <>
   <Navbar />
     <Container>
       <div className="blog-create">
-        <h1>Create Blog</h1>
+        <h1 style={{textAlign:'center'}}>Create Blog</h1>
         <div className="input-fields">
             <input
               placeholder="blogTitle"
               onChange={(e) => setTitle(e.target.value)}
             />
           
-          <input type="text" placeholder="image" value={image} onChange={(e)=>setImage(e.target.value)}/>
-          <h1>description</h1>
+          <input type="file" placeholder="image" onChange={(e)=>setImage(e.target.value)}/>
           <input
               placeholder="Description"
             onChange={(e) => setDescript(e.target.value)}
@@ -83,8 +87,8 @@ function App() {
             />
             <input
               placeholder="time"
-              type="Number"
-              onChange={(e) => setTime(Number(e.target.value))}
+              type="date"
+              onChange={(e) => setTime(Date(e.target.value))}
             />
             
             <button onClick={onSubmitBlogs}> Submit Blog</button>

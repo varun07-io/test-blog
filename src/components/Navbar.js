@@ -9,8 +9,8 @@ export default function Navbar() {
             <div className='navbar' >
                 <div className='nav'>
                     <Link to="/"  style={{ textDecoration: 'none',color: 'black'}}><p>Home</p></Link>
-                    <Link to="/Admin"  style={{ textDecoration: 'none',color: 'black'}}><p>Admin</p></Link> 
                     <Link to="/Blogs" style={{ textDecoration: 'none',color: 'black' }}><p>Blogs</p></Link> 
+                    <Link to="/Admin"  style={{ textDecoration: 'none',color: 'black'}}><p>Admin</p></Link> 
                 </div>
             </div>
         </Container>
